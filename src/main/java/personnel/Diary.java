@@ -2,6 +2,7 @@ package personnel;
 
 import classes.Event;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -12,4 +13,8 @@ public class Diary {
     public List<Event> getEvents(){
         return null;
     }
+    public List<Event> getEventsByDay(Date date){
+        return null;
+    }
+
 }

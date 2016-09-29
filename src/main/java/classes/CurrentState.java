@@ -9,4 +9,8 @@ public class CurrentState {
     // сколько у него есть свободного времени до следующего события,
     // где он сейчас находится
     // куда ему нужно дальше
+
+    private Event event;
+    //private time // тип какой?
+    private String location;
 }

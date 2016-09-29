@@ -13,6 +13,9 @@ public class Secretary {
 
     //выполняет грязную работу секретаря
     HelperOfSecretary helper= new HelperOfSecretary();
+
+    private List<Task> tasks=null; //пусть секретарь хранит таски
+
     public void addEvent(){
 
     }
@@ -21,7 +24,7 @@ public class Secretary {
 
     }
     // предложить ивент
-    public List<Task> proposeEvent(List<Task> tasks, CurrentState cs){
+    public List<Task> proposeEvent( CurrentState cs){
         // приходит текущее состояние, понять какой таск лучше предложить
         // TODO: 28.09.2016 нужно добавить отсортированный список заданий по приоритетам и времени 
 
