@@ -2,30 +2,31 @@ package classes;
 
 import java.sql.Date;
 import java.util.List;
+import java.time.LocalDateTime;
 
 
 /**
  * Created by Albert on 27.09.2016.
  */
 public class Event {
-    private Date date; //время
+    private LocalDateTime date; //время
     private String comment; // описание
     private String location; // местоположение
-    private long prodolgitelnost;// крч траслит, я заебался, потом rename сделаю. в миллисекундах наверн лучше мерить
+    private long prodolgitelnost;// крч траyслит, я заебался, потом rename сделаю. в миллисекундах наверн лучше мерить
     //дальше конструктор гетеры и сетеры
     private List<Task> list;
-    public Event(Date date, String comment, String location, long prodolgitelnost) {
+    public Event(LocalDateTime date, String comment, String location, long prodolgitelnost) {
         this.date = date;
         this.comment = comment;
         this.location = location;
         this.prodolgitelnost = prodolgitelnost;
     }
 
-    public Date getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 

@@ -24,9 +24,16 @@ public class Supervisor {
             List<Task> tasks = secretary.proposeEvent(cs);
             //метод который отправляет предложения
             // TODO: 29.09.2016 нужно предумать форму предложения тасков
-            
+
 
         }
 
+    }
+
+    public void addEvent(Event event){
+        diary.addEvent(event);
+    }
+    public void addTask(Task task){
+        secretary.addTask(task);
     }
 }

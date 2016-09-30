@@ -1,13 +1,14 @@
 package classes;
 
 import java.sql.Date;
+import java.time.LocalDateTime;
 
 /**
  * Created by Albert on 27.09.2016.
  */
 public class Task {
     private double sum; // предпологаемые рассходы
-    private Date date; // срок
+    private LocalDateTime date; // срок
     private String comment;
     private byte prioritet;//
     private String theam; //но думаю, что лучше здесь делать enum, но пока пусть будет так.
@@ -18,7 +19,7 @@ public class Task {
     //самосовершенствие
     //досуг ()
 
-    public Task(Date date, double sum, String comment, byte prioritet, String theam) {
+    public Task(LocalDateTime date, double sum, String comment, byte prioritet, String theam) {
 
         this.date = date;
         this.sum = sum;
@@ -37,11 +38,11 @@ public class Task {
         this.sum = sum;
     }
 
-    public Date getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 
