@@ -11,9 +11,13 @@ public class Task {
     private LocalDateTime date; // срок
     private String comment;
     private byte prioritet;//
-    private String theam; //но думаю, что лучше здесь делать enum, но пока пусть будет так.
+    private String location;
+
+
+
+    private String theam;
     private boolean bool; //можно ли разбивать задание на части, выполнить часть, выполнить вторую часть потом (например)
-    private double time; // предпологаемое время на выполнения задания
+    private long time; // предпологаемое время на выполнения задания
     //накопить денег ()
     //поездки
     //самосовершенствие
@@ -29,44 +33,46 @@ public class Task {
     }
 
 
-
+    public String getLocation() {
+        return location;
+    }
+    public void setLocation(String location) {
+        this.location = location;
+    }
     public double getSum() {
         return sum;
     }
-
     public void setSum(double sum) {
         this.sum = sum;
     }
-
     public LocalDateTime getDate() {
         return date;
     }
-
     public void setDate(LocalDateTime date) {
         this.date = date;
     }
-
     public String getComment() {
         return comment;
     }
-
     public void setComment(String comment) {
         this.comment = comment;
     }
-
     public byte getPrioritet() {
         return prioritet;
     }
-
     public void setPrioritet(byte prioritet) {
         this.prioritet = prioritet;
     }
-
     public String getTheam() {
         return theam;
     }
-
     public void setTheam(String theam) {
         this.theam = theam;
+    }
+    public long getTime() {
+        return time;
+    }
+    public void setTime(long time) {
+        this.time = time;
     }
 }

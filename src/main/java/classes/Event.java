@@ -22,6 +22,15 @@ public class Event {
         this.prodolgitelnost = prodolgitelnost;
     }
 
+    public Event (CurrentState cs, Task task){
+    // перестройка таска в event
+        date = cs.getEndedEvent().date.minusMinutes(cs.getEndedEvent().prodolgitelnost);
+        comment = task.getComment();
+        location = task.getLocation();
+        prodolgitelnost= cs.getNextEvent().getDate().getMinute() - cs.getEndedEvent().getDate().getMinute();
+    }
+
+
     public LocalDateTime getDate() {
         return date;
     }

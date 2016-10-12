@@ -9,8 +9,24 @@ public class CurrentState {
     // сколько у него есть свободного времени до следующего события,
     // где он сейчас находится
     // куда ему нужно дальше
+    // температура на улице
+    private Event endedEvent;
+    private Event nextEvent;
 
-    private Event event;
+    public Event getEndedEvent() {
+        return endedEvent;
+    }
+
+    public void setEndedEvent(Event endedEvent) {
+        this.endedEvent = endedEvent;
+    }
+
+    public Event getNextEvent() {
+        return nextEvent;
+    }
+
+    public void setNextEvent(Event nextEvent) {
+        this.nextEvent = nextEvent;
+    }
     //private time // тип какой?
-    private String location;
 }

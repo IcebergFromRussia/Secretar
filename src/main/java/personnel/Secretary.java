@@ -1,6 +1,7 @@
 package personnel;
 import classes.CurrentState;
 import classes.Event;
+import classes.Suggestion;
 import classes.Task;
 
 import java.util.List;
@@ -21,14 +22,20 @@ public class Secretary {
     // у таска есть какой-то приоритет, есть время, до которого он должен что-то сделать
     // если таск имеет приоритет низкий, но сделать его нужно до завтра, а есть такс с высоким приоритетом, но сделать его нужно до следующей недели.
     // что нужно делать?
-    public List<Task> proposeEvent( CurrentState cs){
+    public Suggestion proposeEvent( CurrentState cs){
         // приходит текущее состояние, понять какой таск лучше предложить
         // TODO: 28.09.2016 нужно добавить отсортированный список заданий по приоритетам и времени 
 
         //метод, который выдаёт список предлагаемых тасков
-        List<Task> listOfProporsedTasks=helper.getProporsedTasks(tasks, cs);
+        Suggestion suggestion=helper.getProporsedTasks(tasks, cs);
+        return suggestion;
+    }
 
-        return listOfProporsedTasks;
+    public Event chooseTaskForEvent(Task task, CurrentState cs){
+//        if(){
+//              //нужно удалить таск в некоторых случаях
+//        }
+        return new Event(cs,task);
     }
 
     // предложить task
